@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const app_1 = __importDefault(require("./app"));
+const app_1 = __importDefault(require("./Server/Config/app"));
 const debug_1 = __importDefault(require("debug"));
-(0, debug_1.default)('week3:sever');
+(0, debug_1.default)('lesson3:server');
 const http_1 = __importDefault(require("http"));
 const port = normalizePort(process.env.PORT || '3000');
 app_1.default.set('port', port);
@@ -46,7 +46,7 @@ function onError(error) {
 }
 function onListening() {
     let addr = server.address();
-    let bind = 'port ' + addr;
+    let bind = 'pipe ' + addr;
     (0, debug_1.default)('Listening on ' + bind);
 }
 //# sourceMappingURL=server.js.map

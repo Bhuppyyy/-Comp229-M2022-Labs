@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import app from './app';
+import app from './Server/Config/app';
 import debug from 'debug';
-debug('week4:sever');
+debug('lesson3:server');
 import http from 'http';
 import { HttpError } from 'http-errors';
 
@@ -19,12 +19,12 @@ function normalizePort(val:string)
 {
   var port = parseInt(val, 10);
 
-  if (isNaN(port))
+  if (isNaN(port)) 
   {
     return val;
   }
 
-  if (port >= 0)
+  if (port >= 0) 
   {
     return port;
   }
@@ -32,9 +32,9 @@ function normalizePort(val:string)
   return false;
 }
 
-function onError(error: HttpError)
- {
-  if (error.syscall !== 'listen')
+function onError(error: HttpError) 
+{
+  if (error.syscall !== 'listen') 
   {
     throw error;
   }
@@ -42,7 +42,8 @@ function onError(error: HttpError)
   let bind = typeof port === 'string'
     ? 'Pipe ' + port
     : 'Port ' + port;
- 
+
+  // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
@@ -57,9 +58,13 @@ function onError(error: HttpError)
   }
 }
 
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
 function onListening() 
 {
   let addr = server.address() as string;
-  let bind = 'port ' + addr;
+  let bind = 'pipe ' + addr;
   debug('Listening on ' + bind);
 }
