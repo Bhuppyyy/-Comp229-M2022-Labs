@@ -1,4 +1,181 @@
-h1
-{
-    font-size: 60px;
-}
+/* 
+app.css
+ExpressPortfolio
+
+Created by Bhupinder Dabb on 06/03/2022.
+Student Id: 301187371
+Copyright © 2022 Centennial College. */
+
+
+/* CSS for components */
+
+body {
+    padding-top: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image: url("../Assets/images/bg2.jpg");
+    background-size: cover;
+  }
+  
+
+  a {
+    color: #FDFD96;
+  }
+  
+  h1 ,h6, h4 {
+    color:blanchedalmond;
+  }
+
+  h2, h3, h5 {
+      letter-spacing: 2px;
+  }
+  
+  p {
+    letter-spacing: 2px;
+    line-height: 130%;
+    color:blanchedalmond;
+  }
+  
+  .table-hover thead tr:hover th, .table-hover tbody tr:hover td {
+    background-color: #EEFDF1;
+  }
+  
+  table:hover {
+    opacity: 0.5;
+  }
+  
+  /* Custom class CSS */
+  .black {
+    background: #191919;
+    margin: 0;
+    padding: 0;
+    right: 0%;
+  }
+  
+  .large-font {
+    font-size: 48px;
+  }
+  
+  .xlarge-font {
+    font-size: 64px
+  }
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+  }
+  
+  img-block {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* Animation And FadeIn CSS */
+  .animated {
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top:35px;
+    margin-bottom:70px;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container-white {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Create two columns that float next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  .column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 30px;
+  }
+  
+  .column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+  }
