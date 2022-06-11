@@ -20,9 +20,7 @@ router.get('/projects', DisplayProjectsPage);
 router.get('/services', DisplayServicesPage);
 
 /* Display contact page. */
-router.get('/contact', DisplayContactPage);
+router.get('/contact', DisplayContactPage); 
 
-/***************** Temporary */ /*
-router.get('/movie-list', DisplayMovieList);
-*/
+
 export default router;

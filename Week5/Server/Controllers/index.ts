@@ -26,13 +26,5 @@ export function DisplayContactPage(req: express.Request, res: express.Response, 
 }
 
 /** Temporary */
-/*
-import Movie from '../Models/movies'
-export function DisplayMovieList(req: express.Request, res: express.Response, next: express.NextFunction)
-{
-   Movie.find(function(err, moviesCollection)
-   {
-       
-   }"))
-}
-*/
+
+
