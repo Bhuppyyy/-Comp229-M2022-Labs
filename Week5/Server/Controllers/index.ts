@@ -24,3 +24,15 @@ export function DisplayContactPage(req: express.Request, res: express.Response, 
 {
     res.render('index', { title: 'Contact Us', page: 'contact' });
 }
+
+/** Temporary */
+/*
+import Movie from '../Models/movies'
+export function DisplayMovieList(req: express.Request, res: express.Response, next: express.NextFunction)
+{
+   Movie.find(function(err, moviesCollection)
+   {
+       
+   }"))
+}
+*/

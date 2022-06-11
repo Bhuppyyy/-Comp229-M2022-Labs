@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 
 //import the controller module
-import { DisplayHomePage, DisplayAboutPage, DisplayContactPage, DisplayProjectsPage, DisplayServicesPage } from "../Controllers/index";
+import {DisplayHomePage, DisplayAboutPage, DisplayContactPage, DisplayProjectsPage, DisplayServicesPage } from "../Controllers/index";
 
 /* Display home page. */
 router.get('/', DisplayHomePage);
@@ -22,4 +22,7 @@ router.get('/services', DisplayServicesPage);
 /* Display contact page. */
 router.get('/contact', DisplayContactPage);
 
+/***************** Temporary */ /*
+router.get('/movie-list', DisplayMovieList);
+*/
 export default router;
