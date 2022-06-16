@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 
 //import router data
 import indexRouter from '../Routes/index'; //top-level routes
-import movieListRouter from '../Routes/movie-list';
+import movieListRouter from '../Routes/movie-list'; //movie-list routes
 
 const app = express();
 
