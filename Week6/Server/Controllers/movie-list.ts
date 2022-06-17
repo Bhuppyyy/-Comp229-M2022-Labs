@@ -11,6 +11,6 @@ export function DisplayMoviesList(req: express.Request, res: express.Response, n
            console.error(err);
            res.end(err);
        }
-       res.render('index', {title: 'Movie List', page: 'movie-list', movies: moviesCollection});
+       res.render('index', {title: 'Movie List', page: 'movie-list', movies: moviesCollection, displayName: '' });
    });
 }
