@@ -1,14 +1,15 @@
 // Step 1 = import mongoose
-import mongoose from 'mongoose'
+import mongoose, {PassportLocalSchema} from 'mongoose'
 const Schema = mongoose.Schema; //alias for mongoose.Schema
+import passportLocalMongoose from 'passport-local-mongoose';
 
 // Step 2 = Create a Schema that matches the data
 const UserSchema = new Schema
 
   ({
-    DsiplayName: String,
+    DisplayName: String,
     username: String,
-    EmailAdress: String,
+    EmailAddress: String,
     Created:
     {
         type: Date,
@@ -24,8 +25,23 @@ const UserSchema = new Schema
       collection: "users"
   });
 
-  //Step 3 = Create a Model using the schema
-  const Model = mongoose.model("User", UserSchema);
+  declare global
+  {
+    export type UserDocument = mongoose.Document &
+    {
+        username: String,
+        EmailAddress: String,
+        DisplayName: String
+    }
+  }
+
   
-  //Step 4 = Export the model -> this makes the file a module
+
+  //Step 3 - Plugin the passport local mongoose module
+  UserSchema.plugin(passportLocalMongoose);
+
+  //Step 4 - Create a Model using the schema
+  const Model = mongoose.model("User", UserSchema as PassportLocalSchema);
+  
+  //Step 5 - Export the model -> this makes the file a module
   export default Model;
